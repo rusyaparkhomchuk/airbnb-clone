@@ -1,8 +1,6 @@
 import prisma from '@/app/libs/prismadb'
-import { use } from 'react'
-import { start } from 'repl'
 
-export interface IListingParams {
+export interface IListingsParams {
 	userId?: string
 	guestCount?: number
 	roomCount?: number
@@ -13,7 +11,7 @@ export interface IListingParams {
 	category?: string
 }
 
-export default async function getListings(params: IListingParams) {
+export default async function getListings(params: IListingsParams) {
 	try {
 		const {
 			userId,
